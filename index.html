@@ -7,7 +7,7 @@
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <!-- bootstrap 3 -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <!-- my css sylesheet -->
@@ -20,83 +20,136 @@
     <!-- corpo del sito -->
     <main>
       <!-- sidebar -->
-      <nav>
-        <div id="logo">
-          <a href="#">
-            <img src="img/spotify-logo-text.svg" alt="Logo di Spotify con testo">
-          </a>
+      <div id="nav-lg">
+        <div class="nav-lg-top">
+          <div id="logo">
+            <a href="#">
+              <img src="img/spotify-logo-text.svg" alt="Logo di Spotify con testo">
+            </a>
+          </div>
+
+          <div id="nav-desktop">
+            <ul>
+              <li>
+                <a href="#" class="nav_active">
+                  <i class="fas fa-home fa-fw"></i>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-search fa-fw"></i>
+                  Cerca
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fas fa-book-open fa-fw"></i>
+                  La tua libreria
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="playlist">
+            <h4>Playlist</h4>
+            <a href="#" class="new_playlist">
+              <i class="fas fa-plus-square"></i>
+              Crea Playlist
+            </a>
+            <div class="playlist_scroll">
+              <ul>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div id="nav-desktop">
+        <div class="nav-lg-bottom">
+          <div id="user">
+            <div class="app">
+              <a href="#">
+                <i class="fas fa-download"></i>
+                Installa App
+              </a>
+            </div>
+            <div class="current_user">
+              <a href="#">
+                <i class="fas fa-user-circle"></i>
+                John Doe
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="nav-xs">
+        <div class="nav-xs-top">
+          <div id="logo-xs">
+            <a href="#">
+              <img src="img/spotify-logo-icon.svg" alt="Logo di Spotify">
+            </a>
+          </div>
           <ul>
             <li>
-              <a href="#" class="nav_active">
+              <a href="#">
                 <i class="fas fa-home fa-fw"></i>
-                Home
               </a>
             </li>
             <li>
               <a href="#">
                 <i class="fas fa-search fa-fw"></i>
-                Cerca
               </a>
             </li>
             <li>
               <a href="#">
                 <i class="fas fa-book-open fa-fw"></i>
-                La tua libreria
               </a>
             </li>
           </ul>
         </div>
 
-        <div id="playlist">
-          <h4>Playlist</h4>
-          <a href="#" class="new_playlist">
-            <i class="fas fa-plus-square"></i>
-            Crea Playlist
+        <div class="nav-xs-bottom">
+          <a href="#">
+            <i class="fas fa-download"></i>
           </a>
-          <div class="playlist_scroll">
-            <ul>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-              <li><a href="#">Nome Playlist</a></li>
-            </ul>
-          </div>
+          <a href="#">
+            <i class="fas fa-user-circle"></i>
+          </a>
         </div>
-
-        <div id="user">
-          <div class="app">
-            <a href="#">
-              <i class="fas fa-download"></i>
-              Installa App
-            </a>
-          </div>
-          <div class="current_user">
-            <a href="#">
-              <i class="fas fa-user-circle"></i>
-              John Doe
-            </a>
-          </div>
-        </div>
-      </nav>
+      </div>
       <!-- sidebar -->
 
       <!-- contenuto -->
-      <section>
+      <div id="main-content">
 
-      </section>
+      </div>
       <!-- /contenuto -->
     </main>
     <!-- /corpo del sito -->
 
     <!-- parte inferiore del sito -->
     <footer>
+        <div id="song">
 
+        </div>
+        <div id="player">
+          <div class="player_top">
+
+          </div>
+          <div class="player_bottom">
+
+          </div>
+        </div>
+        <div id="controls">
+
+        </div>
     </footer>
     <!-- /parte inferiore del sito -->
 

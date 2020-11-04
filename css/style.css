@@ -9,6 +9,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   width: 100%;
   height: calc(100vh - 100px);
@@ -20,17 +24,21 @@ main {
   height: 100%;
 }
 
-nav {
+#nav-lg {
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: space-between;
   /* position: relative; */
   width: 250px;
   background-color: #040404;
-
+  overflow-y: hidden;
 }
 
-section {
+#nav-xs {
+  display: none;
+}
+
+#main-content {
   width: calc(100% - 250px);
   background-color: #141922;
   overflow-y: scroll;
@@ -48,31 +56,49 @@ footer {
 
 /* START MAIN */
 
-/* nav */
-nav #logo {
-  width: 150px;
-  margin: 20px 0 0 20px;
+/* nav-lg */
+#nav-lg {
+  font-size: 14px;
 }
 
-nav #nav-desktop ul {
+#nav-lg .nav-lg-top {
+  width: 100%;
+}
+
+#nav-lg .nav-lg-top #logo {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+#nav-lg .nav-lg-top #logo a {
+  display: inline-block;
+  width: 150px;
+}
+
+#nav-lg .nav-lg-top #nav-desktop {
+  width: 100%;
+}
+
+#nav-lg .nav-lg-top #nav-desktop ul {
   list-style: none;
   margin-top: 30px;
 }
 
-nav #nav-desktop a {
+#nav-lg .nav-lg-top #nav-desktop a {
   display: inline-block;
   padding: 10px 0 0 20px;
   color: #7a7a7a;
   font-weight: 700;
 }
 
-nav #nav-desktop a:hover,
-nav #nav-desktop a:hover i {
+#nav-lg .nav-lg-top #nav-desktop a:hover,
+#nav-lg .nav-lg-top #nav-desktop a:hover i {
   color: #ffffff;
   text-decoration: none;
 }
 
-nav #nav-desktop i {
+#nav-lg .nav-lg-top #nav-desktop i {
   color: #b3b3b3;
   font-size: 24px;
   margin-right: 5px;
@@ -83,103 +109,206 @@ nav #nav-desktop i {
   border-left: 2px solid #1DB954;
 }
 
-nav #playlist {
+#nav-lg .nav-lg-top #playlist {
+  width: 100%;
   margin-top: 30px;
   padding: 0 20px;
-  overflow: auto;
 }
 
-nav #playlist h4 {
+#nav-lg .nav-lg-top #playlist h4 {
+  margin-bottom: 10px;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-nav #playlist .new_playlist {
+#nav-lg .nav-lg-top #playlist .new_playlist {
   display: inline-block;
   color: #7a7a7a;
   font-weight: 700;
 }
 
-nav #playlist .new_playlist:hover,
-nav #playlist .new_playlist:hover i {
+#nav-lg .nav-lg-top #playlist .new_playlist:hover,
+#nav-lg .nav-lg-top #playlist .new_playlist:hover i {
   color: #ffffff;
   text-decoration: none;
 }
 
-nav #playlist .new_playlist i {
+#nav-lg .nav-lg-top #playlist .new_playlist i {
   color: #b3b3b3;
   font-size: 40px;
   margin-right: 5px;
   vertical-align: middle;
 }
 
-nav #playlist .playlist_scroll ul {
+/* nav #playlist .playlist_scroll {
+  overflow-y: auto;
+} */
+
+#nav-lg .nav-lg-top #playlist .playlist_scroll ul {
   list-style: none;
   margin-top: 10px;
 }
 
-nav #playlist .playlist_scroll ul a {
+#nav-lg .nav-lg-top #playlist .playlist_scroll ul a {
   display: inline-block;
   margin-top: 10px;
   color: #7a7a7a;
   font-weight: 700;
 }
 
-nav #playlist .playlist_scroll ul a:hover {
+#nav-lg .nav-lg-top #playlist .playlist_scroll ul a:hover {
   color: #ffffff;
   text-decoration: none;
 }
 
-nav #user {
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%; */
+#nav-lg .nav-lg-bottom {
   width: 100%;
-  align-self: flex-end;
-  padding: 10px 20px;
 }
 
-nav #user .app {
+#nav-lg .nav-lg-bottom #user {
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #040404;
+}
+
+#nav-lg .nav-lg-bottom #user .app {
   padding-bottom: 5px;
   border-bottom: 1px solid #7a7a7a;
 }
 
-nav #user .app a {
+#nav-lg .nav-lg-bottom #user .app a {
   display: inline-block;
   color: #7a7a7a;
   font-weight: 700;
 }
 
-nav #user .app i {
+#nav-lg .nav-lg-bottom #user .app i {
   margin-right: 5px;
 }
 
-nav #user .app a:hover {
+#nav-lg .nav-lg-bottom #user .app a:hover {
   color: #ffffff;
   text-decoration: none;
 }
 
-nav #user .current_user {
+#nav-lg .nav-lg-bottom #user .current_user {
   padding-top: 10px;
 }
 
-nav #user .current_user a {
+#nav-lg .nav-lg-bottom #user .current_user a {
   display: inline-block;
   color: #fff;
+  font-size: 16px;
   font-weight: 700;
 }
-nav #user .current_user a:hover {
+#nav-lg .nav-lg-bottom #user .current_user a:hover {
   text-decoration: none;
 }
 
-nav #user .current_user i {
+#nav-lg .nav-lg-bottom #user .current_user i {
   margin-right: 10px;
   font-size: 20px;
   vertical-align: middle;
 }
-/* /nav */
+/* /nav-lg */
+
+/* nav-xs */
+#nav-xs {
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 40px;
+  background-color: #040404;
+}
+
+#nav-xs .nav-xs-top #logo-xs img {
+  margin-top: 10px;
+  padding: 0 5px;
+  width: 100%;
+  text-align: center;
+}
+
+#nav-xs .nav-xs-top ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+#nav-xs .nav-xs-top a {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 5px;
+  text-align: center;
+  color: #7a7a7a;
+  font-weight: 700;
+}
+
+#nav-xs .nav-xs-top a:hover,
+#nav-xs .nav-xs-top a:hover i {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#nav-xs .nav-xs-top i {
+  color: #b3b3b3;
+  font-size: 16px;
+  text-align: center;
+}
+
+#nav-xs .nav-xs-bottom {
+  padding: 10px 0;
+}
+
+#nav-xs .nav-xs-bottom a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #7a7a7a;
+  font-weight: 700;
+}
+
+#nav-xs .nav-xs-bottom a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#nav-xs .nav-xs-bottom .fa-user-circle {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+/* /nav-xs */
 
 /* END MAIN */
+
+/* START FOOTER */
+
+/* song */
+#song {
+
+}
+/* /song */
+
+/* END FOOTER */
+
+
+@media screen and (max-width: 767px) {
+
+  #nav-lg {
+    display: none
+  }
+
+  #nav-xs {
+    display: flex;
+  }
+
+  #main-content {
+    width: calc(100% - 40px);
+    background-color: #141922;
+    overflow-y: scroll;
+  }
+
+}
